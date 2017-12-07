@@ -2,9 +2,9 @@
   "name": "sistema-crediticio",
   "version": "1.0.0",
   "description": "Este proyecto servirá para practicar el diseño de sistemas de una empresa.",
-  "main": "main.js",
+  "main": "src/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "set ELECTRON_IS_DEV=1 && electron ."
   },
   "repository": {
     "type": "git",
@@ -14,10 +14,20 @@
     "electron",
     "node.js"
   ],
-  "author": "Sotelo & Gutierrez",
+  "contributors": [
+    "Yeison Sotelo <arturo.sotelo@outlook.com>",
+    "Shirley Gutierrez <shirley_1007@hotmail.com"
+  ],
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/Kunzamita/sistema-crediticio/issues"
   },
-  "homepage": "https://github.com/Kunzamita/sistema-crediticio#readme"
+  "homepage": "https://github.com/Kunzamita/sistema-crediticio#readme",
+  "dependencies": {
+    "react": "^16.2.0"
+  },
+  "devDependencies": {
+    "electron": "^1.7.9",
+    "electron-is-dev": "^0.3.0"
+  }
 }
