@@ -7,10 +7,11 @@ var _id = remote.getGlobal('variables').user;
 
 // informacion para conectar a la base de datos
 const admin = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'root',
-    database: 'arcijaelDB'
+    host: 'db4free.net',
+    port: 3307,
+    user: 'admindeoro',
+    password: 'rootroot',
+    database: 'arcijael'
 });
 
 // efecto esconder de la barra lateral
