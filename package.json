@@ -2,9 +2,10 @@
   "name": "sistema-crediticio",
   "version": "1.0.0",
   "description": "Este proyecto servirá para practicar el diseño de sistemas de una empresa.",
-  "main": "src/main.js",
+  "main": "main.js",
   "scripts": {
-    "start": "set ELECTRON_IS_DEV=1 && electron ."
+    "start": "set ELECTRON_IS_DEV=1 && electron .",
+    "sqlite": "cd node_modules/sqlite3 && npm run prepublish && node-gyp configure --module_name=node_sqlite3 --module_path=../lib/binding/node-v47-win32-x64 && node-gyp node-gyp rebuild --target=0.36.0 --arch=x64 --target_platform=win32 --dist-url=https://atom.io/download/atom-shell --module_name=node_sqlite3 --module_path=../lib/binding/node-v47-win32-x64"
   },
   "repository": {
     "type": "git",
@@ -24,7 +25,10 @@
   },
   "homepage": "https://github.com/Kunzamita/sistema-crediticio#readme",
   "dependencies": {
-    "react": "^16.2.0"
+    "electron-window-manager": "^1.0.4",
+    "mysql": "^2.15.0",
+    "react": "^16.2.0",
+    "sql.js": "^0.4.0"
   },
   "devDependencies": {
     "electron": "^1.7.9",

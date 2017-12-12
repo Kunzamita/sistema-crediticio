@@ -1,0 +1,79 @@
+<html>
+<head>
+    <!-- Estilos para formas bonitas -->
+    <link rel="stylesheet" href="../../css/jquery.flipster.min.css">
+    <link rel="stylesheet" href="../../css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+
+    <!-- Mis estilos -->
+    <link href="../../css/style.min.css" rel="stylesheet">
+    <link href="../../css/page-center.css" rel="stylesheet">
+
+    <!-- Mi titulo -->
+    <title>ARCIJAEL</title>
+
+</head>
+
+<body class="cyan lighten-2 loaded">
+
+    <!-- panel de inicion de sesion -->
+
+    <div class="card-panel">
+        <form class="login-form row">
+
+            <!-- cabecera -->
+            <div class="input-field col s12 center row">
+                <img src="../../img/login-logo.min.png" class="profile-image-login">
+                <p class="center login-form-text">Asociacion Regional de Cesantes y Jubilados y Activos del Sector Educacion de Lima</p>
+            </div>
+            
+            <!-- casillero usuario -->
+            <div class="input-field col s12">
+                <i class="material-icons prefix">person_outline</i>
+                <input id = "usuario" type="text">
+                <label for = "usuario">Usuario</label>
+            </div>
+
+            <!-- casillero clave -->
+            <div class="input-field col s12">
+                <i class="material-icons prefix">lock_outline</i>
+                <input id = "clave" type="password">
+                <label for = "clave">Contraseña</label>
+            </div>
+            
+            <!-- casillero guardame -->  
+            <div class="input-field col s12 login-text row">
+                <input type="checkbox" id="guardame">
+                <label for="guardame">Guardar contraseña</label>
+            </div>
+            
+            <!-- boton entrar -->
+            <div class="input-field col s12">
+                <a onclick = "botonEntrar();" class="btn waves-effect waves-light col s12">Entrar</a>
+            </div>
+            
+            
+            <div class="input-field col s6">
+                <p class="margin medium-small"><a href="page-register.html">Registrarse</a></p>
+            </div>
+            <div class="input-field col s6">
+                <p class="margin right-align medium-small"><a href="page-forgot-password.html">Me olvide la contraseña</a></p>
+            </div>          
+        </form>
+    </div>
+    
+</body>
+
+<!-- Scripts de formas bonitas-->
+<script>
+    window.$ = window.jQuery = require('../../libs/jquery.min.js');
+</script>
+<script src="../../libs/hammer.min.js" onload="window.Hammer = module.exports;"></script>
+<script src="../../libs/materialize.min.js"></script>
+
+<!-- Mis scripts -->
+<script src="login.js"></script>
+
+</html>

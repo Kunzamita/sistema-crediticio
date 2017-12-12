@@ -1,0 +1,99 @@
+<html>
+<head>
+    <!-- Estilos para formas bonitas -->
+    <link rel="stylesheet" href="../../css/jquery.flipster.min.css">
+    <link rel="stylesheet" href="../../css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+
+    <!-- Mis estilos -->
+    <link href="../../css/page-footer.css" rel="stylesheet">
+
+    <!-- Mi titulo -->
+    <title>ARCIJAEL</title>
+</head>
+
+<body>
+    <!-- Encabezado -->
+    <header>
+        <nav class="deep-purple lighten-2 nav-wrapper">
+            <!-- Logo -->
+            <a href="#" class="brand-logo center valign">
+                <img src="../../img/logo.min.png">
+            </a>         
+            
+            <!-- botones -->
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li>
+                    <a href="#" data-activates="dropdown1" class="dropdown-button" right>
+                        <i class="material-icons">menu</i>
+                    </a>
+                </li>
+            </ul>
+            
+            <!-- barra lateral -->
+            <ul id="dropdown1" class="dropdown-content">
+                <!-- informacion basica -->
+                <li><div class="user-view deep-purple lighten-2">
+                      <a><img id="foto" class="circle" src="../../img/logo.png"></a>
+                      <a href="#!name"><span id="usuario" class="white-text name">Usuario</span></a>
+                      <a href="#!email"><span id="correo" class="white-text email">correo@servidor.com</span></a>
+                </div></li>
+                <li><a class="waves-effect" href="#!">Mi cuenta</a></li>
+                <li><a class="waves-effect" href="#!">Cerrar sesión</a></li>
+            </ul>
+        </nav>  
+    </header>
+    
+
+    <!-- Contenido -->
+    <main>
+            <table class="highlight">
+            <thead>
+              <tr>
+                  <th>Name</th>
+                  <th>Item Name</th>
+                  <th>Item Price</th>
+              </tr>
+            </thead>
+    
+            <tbody>
+              <tr>
+                <td>Alvin</td>
+                <td>Eclair</td>
+                <td>$0.87</td>
+              </tr>
+              <tr>
+                <td>Alan</td>
+                <td>Jellybean</td>
+                <td>$3.76</td>
+              </tr>
+              <tr>
+                <td>Jonathan</td>
+                <td>Lollipop</td>
+                <td>$7.00</td>
+              </tr>
+            </tbody>
+          </table>
+
+    </main>
+
+    <!-- Pie -->
+    <footer class="page-footer deep-purple lighten-2">
+        <div class="container">
+            asd
+        </div>
+    </footer>
+</body>
+
+<!-- Scripts de formas bonitas-->
+<script>
+        window.$ = window.jQuery = require('../../libs/jquery.min.js');
+</script>
+<script src="../../libs/hammer.min.js" onload="window.Hammer = module.exports;"></script>
+<script src="../../libs/materialize.min.js"></script>
+
+<!-- Mis scripts -->
+<script src="busca.asociados.js"></script>
+</html>
