@@ -17,65 +17,72 @@
 <body>
     <!-- Encabezado -->
     <header>
-        <nav class="deep-purple lighten-2 nav-wrapper">
-            <!-- Logo -->
-            <a href="#" class="brand-logo center valign">
-                <img src="../../img/logo.min.png">
-            </a>         
-            
-            <!-- botones -->
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li>
-                    <a href="#" data-activates="dropdown1" class="dropdown-button" right>
-                        <i class="material-icons">menu</i>
-                    </a>
-                </li>
-            </ul>
-            
-            <!-- barra lateral -->
-            <ul id="dropdown1" class="dropdown-content">
-                <!-- informacion basica -->
-                <li><div class="user-view deep-purple lighten-2">
-                      <a><img id="foto" class="circle" src="../../img/logo.png"></a>
-                      <a href="#!name"><span id="usuario" class="white-text name">Usuario</span></a>
-                      <a href="#!email"><span id="correo" class="white-text email">correo@servidor.com</span></a>
-                </div></li>
-                <li><a class="waves-effect" href="#!">Mi cuenta</a></li>
-                <li><a class="waves-effect" href="#!">Cerrar sesión</a></li>
-            </ul>
-        </nav>  
+        <nav class="top-nav light-blue darken-2">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <!-- Logo -->
+                    <a href="#">
+                        <img src="../../img/logo.min.png">
+                    </a>         
+                    
+                    <!-- botones -->
+                    <ul class="right">
+                        <li>
+                            <a href="#" data-activates="loginMenu" class="button-collapse show-on-large">
+                                <i class="material-icons">person</i>
+                            </a>
+                        </li>
+                    </ul>
+    
+                    <!-- Menu derecho de usuario -->
+                    <ul id="loginMenu" class="side-nav">
+                        <!-- informacion basica -->
+                        <li><div class="user-view light-blue darken-4">
+                                <a><img id="foto" class="circle" src="../../img/logo.png"></a>
+                                <a href="#!name"><span id="usuario" class="white-text name">Usuario</span></a>
+                                <a href="#!email"><span id="correo" class="white-text email">correo@servidor.com</span></a>
+                        </div></li>
+                        <li><a class="waves-effect" href="#!">Mi cuenta</a></li>
+                        <li><a class="waves-effect" href="#!">Cerrar sesión</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
     
 
     <!-- Contenido -->
-    <main>
-            <table class="highlight">
-            <thead>
-              <tr>
-                  <th>Name</th>
-                  <th>Item Name</th>
-                  <th>Item Price</th>
-              </tr>
-            </thead>
-    
-            <tbody>
-              <tr>
-                <td>Alvin</td>
-                <td>Eclair</td>
-                <td>$0.87</td>
-              </tr>
-              <tr>
-                <td>Alan</td>
-                <td>Jellybean</td>
-                <td>$3.76</td>
-              </tr>
-              <tr>
-                <td>Jonathan</td>
-                <td>Lollipop</td>
-                <td>$7.00</td>
-              </tr>
-            </tbody>
-          </table>
+    <main class="light-blue lighten-5">
+        <div class="container">
+
+            <!-- Rectangulo blanco -->
+            <ul class="collapsible"  data-collapsible="expandable">
+                <li>
+                    <div class="collapsible-header active">
+                        <i class="material-icons">face</i> TABLA DE CLIENTES
+                    </div>
+                    <div id="tabla-contenedor" class="collapsible-body white">
+                        <table id="tabla-clientes" class="col s12 highlight">
+                            <thead>
+                                <th>Apellidos y nombres</th>
+                                <th>DNI</th>
+                                <th>Codigo</th>
+                                <th>Descuento</th>
+                                <th><span class="white-text">
+                                        <i class='material-icons'>edit</i>
+                                        <i class='material-icons'>attach_money</i>
+                                        <i class='material-icons'>timeline</i>
+                                    </span>
+                                </th>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </li>
+            </div>
+        </div>
+        
 
     </main>
 

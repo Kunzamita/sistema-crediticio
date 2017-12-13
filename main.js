@@ -34,7 +34,5 @@ app.on('ready', function () {
 });
 
 app.on('window-all-closed', function(){
-    console.log('hola');
-
     app.quit();
 });
