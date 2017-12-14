@@ -100,6 +100,13 @@ $( "#tabla-contenedor" ).on("mouseout","#tabla-clientes tr", function(){
 $("#tabla-contenedor").on('click','i',function(){
     switch($(this).index()) {
         case 0:
+            var _idCliente = $(this).parent().parent().parent().index()+1;
+            admin.query('SELECT apellidoPat, apellidoMat, nombres, dni, asociadoNumero FROM cliente WHERE id =?', [_idCliente], function (error, resultado, campos) {
+                $("#apellidoPat").attr("value",resultado[0].apellidoPat);
+                $("#apellidoMat").attr("value",resultado[0].apellidoMat);
+                $("#nombres").attr("value",resultado[0].nombres);
+                $("#dni").attr("value",resultado[0].dni);
+            });
             $('#modal-edicion').modal('open');
             break;
         case 1:
