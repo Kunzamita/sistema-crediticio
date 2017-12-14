@@ -62,28 +62,63 @@
                         <i class="material-icons">face</i> TABLA DE CLIENTES
                     </div>
                     <div id="tabla-contenedor" class="collapsible-body white">
-                        <table id="tabla-clientes" class="col s12 highlight">
+                        <table id="tabla-clientes" class="highlight">
                             <thead>
                                 <th>Apellidos y nombres</th>
                                 <th>DNI</th>
                                 <th>Codigo</th>
                                 <th>Descuento</th>
-                                <th><span class="white-text">
-                                        <i class='material-icons'>edit</i>
-                                        <i class='material-icons'>attach_money</i>
-                                        <i class='material-icons'>timeline</i>
-                                    </span>
-                                </th>
+                                <th></th>
                             </thead>
                             <tbody>
                             </tbody>
                         </table>
+
+                        <ul id="paginacion" class="pagination center-align">
+                            <li class="waves-effect"><a href="#!"><i class="material-icons light-blue-text text-darken-2">chevron_left</i></a></li>
+                            <li class="active"><a href="#!">1</a></li>
+                            <li class="waves-effect"><a href="#!">2</a></li>
+                            <li class="waves-effect"><a href="#!">3</a></li>
+                            <li class="waves-effect"><a href="#!">4</a></li>
+                            <li class="waves-effect"><a href="#!">5</a></li>
+                            <li class="waves-effect"><a href="#!">6</a></li>
+                            <li class="waves-effect"><a href="#!">7</a></li>
+                            <li class="waves-effect"><a href="#!"><i class="material-icons  light-blue-text text-darken-2">chevron_right</i></a></li>
+                        </ul>
                     </div>
                 </li>
-            </div>
+            </ul>
         </div>
         
-
+        <!-- ventana de editar asociados -->
+        <div id="modal-edicion" class="modal modal-fixed-footer">
+            <div class="modal-content">
+                <h4>Editar cliente</h4>
+                <div class="row">
+                    <form class="col s12">
+                        <div class="input-field col s6">
+                            <input id="apellidoPat" type="text" class="validate">
+                            <label for="apellidoPat">Apellido paterno</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="apellidoMat" type="text" class="validate">
+                            <label for="apellidoMat">Apellido materno</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input id="nombres" type="text" class="validate">
+                            <label for="nombres">Nombres</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="dni" type="text" class="validate">
+                            <label for="dni">Nombres</label>
+                        </div>
+                    </form>
+                  </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+            </div>
+          </div>
     </main>
 
     <!-- Pie -->
