@@ -31,7 +31,8 @@ function botonEntrar(){
     admin.query('SELECT id,clave FROM miembro WHERE usuario = ?', [_usuario], function (error, resultado, campos) {
         if (resultado.length > 0){
             //los compara
-            if (resultado[0].clave == _clave){     
+            if (resultado[0].clave == _clave){   
+                  
                 remote.getGlobal('variables').user = resultado[0].id;           
                 ipcRenderer.send('abrir-busca-asociados');
             }

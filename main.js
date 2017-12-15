@@ -15,32 +15,24 @@ global.variables = {
 app.on('ready', function () {
     // crea la ventana principal
     var mainWindow = new BrowserWindow({
-        width: 1080,
-        height: 680,
-        minWidth: 700,
-        minHeight: 500
+        width: 320,
+        height: 480,
+        minWidth: 320,
+        minHeight: 480,
+        title: "ARCIJAEL",
+        show:false
     });
-    mainWindow.loadURL('file://' + __dirname + '/app/windows/login/login.html');
-
-    // crea ventana edita.asociados
-    var editaAsociados = new BrowserWindow({
-        parent: mainWindow,
-        width: 800,
-        height: 500,
-        resizable: false,
-        show: false
-    });
-    editaAsociados.setMenu(null);
+    //mainWindow.setMenu(null);
+    mainWindow.loadURL('file://' + __dirname + '/index.html');
     
+    // muestra ventana principal
+    mainWindow.once('ready-to-show', function(){
+        mainWindow.show();
+    });
+
     // capta cambio de ventana
     ipcMain.on('abrir-busca-asociados', function () {
         mainWindow.loadURL('file://' + __dirname + '/app/windows/busca.asociados/busca.asociados.html');
-    });
-
-    //muestra edita.asociados
-    ipcMain.on('abrir-edita-asociados', function () {
-        console.log('test');
-        editaAsociados.show();
     });
 
     // muestra la ventana de depuracion

@@ -1,0 +1,124 @@
+<html>
+<head>
+    <!-- Estilos para formas bonitas -->
+    <link rel="stylesheet" href="app/css/jquery.flipster.min.css">
+    <link rel="stylesheet" href="app/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+
+    <!-- Mis estilos -->
+    <link rel="stylesheet" href="app/css/a-link.css">
+</head>
+
+<body class="row">
+
+    <header>
+        <div id ="login-header">
+            <nav class="red row">
+                <div class="nav-wrapper">
+                    <div class="container">
+                        <span style="font-weight: bold; font-size: 16px;">Ingreso de sesión</span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div id ="personas-header">
+            <nav class="red row">
+                <div class="nav-wrapper">
+                    <a data-activates="usuarioSide" class="button-collapse">
+                        <i class="material-icons">menu</i>
+                    </a>
+                    <span style="font-weight: bold; font-size: 16px;">Personas</span>
+                </div>
+            </nav>
+            <ul id="usuarioSide" class="side-nav">
+                    <li>
+                        <div class="user-view">
+                            <div class="background">
+                                <img src="app/img/back-side.jpg">
+                            </div>
+                            <a href="#!user"><img id="fotoPersonas" class="circle" src="app/fotos/0.jpg"></a>
+                            <a href="#!name"><span id="nombrePersonas" class="white-text name">Usuario</span></a>
+                            <a href="#!email"><span id="correoPersonas" class="white-text email">Correo</span></a>
+                        </div>
+                    </li>
+                    <li><a>Mi cuenta</a></li>
+                    <li><a>Cerrar sesión</a></li>
+                </ul>
+        </div>
+        
+    </header>
+
+    <main>
+        <div id="logo-main" class="center">
+            <img style="width: 50%" src="app/img/logo-load.png">
+        </div>
+
+        <div id="login-main" class="center">
+            <form class="login-form row">
+                    
+                <!-- cabecera -->
+                <div class="input-field col s12 center row">
+                    <img src="app/img/logo-loginv2.png">
+                </div>
+                
+                <!-- casillero usuario -->
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">person_outline</i>
+                    <input id = "usuario" type="text">
+                    <label for = "usuario">Usuario</label>
+                </div>
+    
+                <!-- casillero clave -->
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">lock_outline</i>
+                    <input id = "clave" type="password">
+                    <label for = "clave">Contraseña</label>
+                </div>
+                
+                <!-- boton entrar -->
+                <div class="input-field col s12">
+                    <a onclick = "botonEntrar();" class="btn waves-effect waves-light col s12">Entrar</a>
+                </div>
+                       
+            </form>
+        </div>
+
+        <div id ="personas-main">
+            <table id="tablaPersonas" class="bordered">
+                <tbody></tbody>
+            </table>
+
+            <div class="fixed-action-btn">
+                <a class="btn-floating red">
+                    <i class="large material-icons">add</i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div id="logo-footer" class="row">
+            <h3 class="grey-text">Arcijael</h3>
+        </div>
+
+        <div id="login-footer" class="center">
+            
+        </div>
+    </footer>
+
+</body>
+
+<!-- Scripts de formas bonitas-->
+<script>
+    window.$ = window.jQuery = require('./app/libs/jquery.min.js');
+</script>
+<script src="app/libs/hammer.min.js" onload="window.Hammer = module.exports;"></script>
+<script src="app/libs/materialize.min.js"></script>
+
+<!-- Mis scripts -->
+<script src="index.js"></script>
+
+</html>
