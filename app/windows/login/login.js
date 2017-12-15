@@ -28,7 +28,7 @@ function botonEntrar(){
     let _clave = document.getElementById('clave').value;
 
     // obtiene el usuario y clave de la base de datos
-    admin.query('SELECT id,clave FROM miembro WHERE usuario = ?', [_usuario], function (error, resultado, campos) {
+    admin.query('SELECT id,clave FROM usuarioAdmin WHERE usuario = ?', [_usuario], function (error, resultado, campos) {
         if (resultado.length > 0){
             //los compara
             if (resultado[0].clave == _clave){     

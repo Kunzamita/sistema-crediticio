@@ -33,7 +33,7 @@ $(document).ready(function(){
 // TABLA //////////////////////
 ///////////////////////////////  
 // poner datos en barra lateral
-admin.query('SELECT nombre, apellidoPat, correo FROM miembro WHERE id = ?', [_id], function (error, resultado, campos) {
+admin.query('SELECT nombre, apellidoPat, correo FROM usuarioAdmin WHERE id = ?', [_id], function (error, resultado, campos) {
     document.getElementById('usuario').innerHTML = resultado[0].nombre + " " + resultado[0].apellidoPat;
     document.getElementById('correo').innerHTML = resultado[0].correo;
     document.getElementById('foto').src = "../../fotos/" + _id + ".jpg";
@@ -43,8 +43,8 @@ admin.query('SELECT nombre, apellidoPat, correo FROM miembro WHERE id = ?', [_id
 var tablaClientes = document.getElementById('tabla-clientes').getElementsByTagName('tbody')[0];
 
 // crea las filas e inserta datos de clientes
-admin.query('SELECT apellidoPat, apellidoMat, nombres, dni, asociadoNumero FROM cliente WHERE id >=1 AND id <=10', function (error, resultado, campos) {
-    resultado.forEach(cliente => {
+admin.query('SELECT apellidoPat, apellidoMat, nombres, dni, asociadoNumero FROM persona WHERE id >=1 AND id <=10', function (error, resultado, campos) {
+    resultado.forEach(persona => {
         //insertar nueva fila
         var fila = tablaClientes.insertRow(-1);
 
@@ -56,11 +56,11 @@ admin.query('SELECT apellidoPat, apellidoMat, nombres, dni, asociadoNumero FROM 
         var celdaBotones = fila.insertCell(4);
 
         //inserta datos
-        celdaNombre.innerHTML = cliente.apellidoPat + " " + cliente.apellidoMat + " " + cliente.nombres;
-        var dniExtendido = "00000000"+cliente.dni;
+        celdaNombre.innerHTML = persona.apellidoPat + " " + persona.apellidoMat + " " + persona.nombres;
+        var dniExtendido = "00000000"+persona.dni;
         celdaDni.innerHTML = dniExtendido.substr(dniExtendido.length-8);
-        if (cliente.asociadoNumero != null){
-            celdaCodigo.innerHTML = cliente.asociadoNumero;
+        if (persona.asociadoNumero != null){
+            celdaCodigo.innerHTML = persona.asociadoNumero;
         } else {
             celdaCodigo.innerHTML = "-";
         }
@@ -101,7 +101,7 @@ $("#tabla-contenedor").on('click','i',function(){
     switch($(this).index()) {
         case 0:
             var _idCliente = $(this).parent().parent().parent().index()+1;
-            admin.query('SELECT apellidoPat, apellidoMat, nombres, dni, asociadoNumero FROM cliente WHERE id =?', [_idCliente], function (error, resultado, campos) {
+            admin.query('SELECT apellidoPat, apellidoMat, nombres, dni, asociadoNumero FROM persona WHERE id =?', [_idCliente], function (error, resultado, campos) {
                 $("#apellidoPat").attr("value",resultado[0].apellidoPat);
                 $("#apellidoMat").attr("value",resultado[0].apellidoMat);
                 $("#nombres").attr("value",resultado[0].nombres);
@@ -127,8 +127,8 @@ function insertaFilas (index) {
         tablaClientes.removeChild(tablaClientes.firstChild);
     }
 
-    admin.query('SELECT apellidoPat, apellidoMat, nombres, dni, asociadoNumero FROM cliente WHERE id >=? AND id <=?',[comienza, comienza + 9], function (error, resultado, campos) {
-        resultado.forEach(cliente => {
+    admin.query('SELECT apellidoPat, apellidoMat, nombres, dni, asociadoNumero FROM persona WHERE id >=? AND id <=?',[comienza, comienza + 9], function (error, resultado, campos) {
+        resultado.forEach(persona => {
             //insertar nueva fila
             var fila = tablaClientes.insertRow(-1);
 
@@ -140,10 +140,10 @@ function insertaFilas (index) {
             var celdaBotones = fila.insertCell(4);
 
             //inserta datos
-            celdaNombre.innerHTML = cliente.apellidoPat + " " + cliente.apellidoMat + " " + cliente.nombres;
-            var dniExtendido = "00000000"+cliente.dni;
+            celdaNombre.innerHTML = persona.apellidoPat + " " + persona.apellidoMat + " " + persona.nombres;
+            var dniExtendido = "00000000"+persona.dni;
             celdaDni.innerHTML = dniExtendido.substr(dniExtendido.length-8);
-            celdaCodigo.innerHTML = cliente.asociadoNumero
+            celdaCodigo.innerHTML = persona.asociadoNumero
             celdaDescuento.innerHTML = "0";
             celdaBotones.innerHTML = "<span class='white-text'><i class='material-icons'>edit</i> <i class='material-icons'>attach_money</i> <i class='material-icons'>timeline</i></span>"
         });
